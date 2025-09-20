@@ -32,7 +32,7 @@ A RESTful API for managing products, categories, and user access in an e-commerc
 ## Getting Started
 1. Clone
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/mijami/ecommerce-inventory-api.git
    cd ECommerceInventory
    ```
 2. Choose provider

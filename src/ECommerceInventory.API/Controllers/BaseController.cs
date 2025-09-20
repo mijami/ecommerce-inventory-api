@@ -15,7 +15,7 @@ public abstract class BaseController : ControllerBase
             ConflictException => Conflict(new { message = ex.Message }),
             KeyNotFoundException => NotFound(new { message = ex.Message }),
             InvalidOperationException => BadRequest(new { message = ex.Message }),
-            UnauthorizedAccessException => Unauthorized(new { message = ex.Message }),
+            UnauthorizedAccessException => StatusCode(403, new { message = ex.Message }),
             _ => StatusCode(500, new { message = $"An error occurred during {operation}", details = ex.Message })
         };
     }
